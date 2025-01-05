@@ -1,46 +1,99 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #0B1033;
+    color: #BFC8FF;
   }
   
-  header {
-    background: #4CAF50;
-    color: #fff;
+  /* Hero Section */
+  .hero {
     text-align: center;
-    padding: 1rem 0;
+    padding: 50px;
+    background: linear-gradient(135deg, #212855, #464E80);
+    color: #fff;
   }
   
   .hero h1 {
-    margin: 0;
+    font-size: 2.5rem;
   }
   
   .links a {
     margin: 0 10px;
-    color: #fff;
+    color: #BFC8FF;
     text-decoration: none;
-    background: #333;
-    padding: 5px 10px;
+    border: 2px solid #BFC8FF;
+    padding: 5px 15px;
     border-radius: 5px;
+    transition: all 0.3s ease;
   }
   
+  .links a:hover {
+    background-color: #BFC8FF;
+    color: #0B1033;
+  }
+  
+  /* Section Styles */
   section {
     padding: 2rem;
-    margin: 1rem;
-    background: #f4f4f4;
+    margin: 1rem auto;
+    max-width: 800px;
+    background-color: #212855;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #BCBFD5;
+  }
+  
+  /* Projects */
+  .project {
+    background-color: #464E80;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .project h3 {
+    color: #BFC8FF;
+  }
+  
+  .project video {
+    display: block;
+    max-width: 100%;
+    margin: 10px 0;
     border-radius: 8px;
   }
   
-  .project {
-    border: 1px solid #ddd;
-    margin: 1rem 0;
-    padding: 1rem;
-    background: #fff;
+  /* Contact Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   
-  .project a {
-    text-decoration: none;
-    color: #4CAF50;
+  input, textarea, button {
+    font-size: 1rem;
+    padding: 10px;
+    border: 2px solid #BFC8FF;
+    border-radius: 5px;
+    background-color: #7A80AA;
+    color: #fff;
+  }
+  
+  button {
+    background-color: #BCBFD5;
+    color: #0B1033;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #7A80AA;
+    color: #fff;
   }
   
