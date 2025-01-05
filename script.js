@@ -1,6 +1,6 @@
-// Replace 'yourusername' with your GitHub username
 const githubUsername = "hanahussain";
 const projectContainer = document.getElementById("project-container");
+const videoFolderPath = "assets/videos/";
 
 // Fetch repositories using GitHub's API
 async function fetchGitHubRepos() {
@@ -20,23 +20,39 @@ async function fetchGitHubRepos() {
   }
 }
 
-// Display repositories dynamically
+// Display repositories with linked videos
 function displayProjects(repos) {
-  repos.forEach(repo => {
-    const project = document.createElement("div");
-    project.classList.add("project");
-
-    // Create project HTML structure
-    project.innerHTML = `
-      <h3>${repo.name}</h3>
-      <p>${repo.description || "No description provided"}</p>
-      <p><strong>Language:</strong> ${repo.language || "Not specified"}</p>
-      <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-    `;
-
-    projectContainer.appendChild(project);
-  });
-}
+    repos.forEach(repo => {
+      const project = document.createElement("div");
+      project.classList.add("project");
+  
+      // Check if a video file exists for the project
+      const videoFile = `${videoFolderPath}${repo.name}.mp4`;
+  
+      // Create project HTML structure
+      project.innerHTML = `
+        <h3>${repo.name}</h3>
+        <p>${repo.description || "No description provided"}</p>
+        ${checkVideoFile(videoFile) ? 
+          `<video controls>
+            <source src="${videoFile}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>` 
+          : "<p>No video demo available</p>"}
+        <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+      `;
+  
+      projectContainer.appendChild(project);
+    });
+  }
+  
+  // Function to check if a video file exists (returns true or false)
+  function checkVideoFile(videoFilePath) {
+    const http = new XMLHttpRequest();
+    http.open('HEAD', videoFilePath, false); // Synchronous request to check file
+    http.send();
+    return http.status === 200;
+  }
 
 // Fetch and display repositories when the page loads
 fetchGitHubRepos();
