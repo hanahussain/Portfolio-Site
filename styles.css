@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .hero h1 {
+    margin: 0;
+  }
+  
+  .links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    background: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  section {
+    padding: 2rem;
+    margin: 1rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+  }
+  
+  .project {
+    border: 1px solid #ddd;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #fff;
+  }
+  
+  .project a {
+    text-decoration: none;
+    color: #4CAF50;
+  }
+  
