@@ -10,11 +10,15 @@ body {
   
   /* Hero Section */
   .hero {
-    text-align: center;
-    padding: 50px;
-    background: linear-gradient(135deg, #212855, #464E80);
-    color: #fff;
+    background: url('assets/images/bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
   }
+  
   
   .hero h1 {
     font-size: 2.5rem;
@@ -35,6 +39,25 @@ body {
     transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
     opacity: 0; /* Start as invisible */
   }
+
+  .arrow-down {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 4.5rem;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .arrow-down:hover {
+    transform: scale(1.2); /* Enlarge slightly on hover */
+    background: rgba(0, 0, 0, 0.8); /* Darker on hover */
+  }
+  
   
   
   .links a {

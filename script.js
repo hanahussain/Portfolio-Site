@@ -77,7 +77,11 @@ function displayProjects(repos) {
     flashText(); // Start immediately
     setInterval(flashText, 3000); // Run every 4.5 seconds (2s visible + 1s pause)
   });
-  
+
+  document.querySelector('.arrow-down').addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+  });  
 
   
 // Fetch and display repositories when the page loads
