@@ -137,8 +137,6 @@ async function fetchGitHubRepos() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
-  
- 
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
@@ -151,6 +149,15 @@ window.addEventListener("scroll", () => {
 backToTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+document.querySelectorAll(".hero-button").forEach(button => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetSection = document.querySelector(e.target.getAttribute("href"));
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  });
+});
+
 
 
   
