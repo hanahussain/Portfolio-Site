@@ -58,8 +58,6 @@ body {
     background: rgba(0, 0, 0, 0.8); /* Darker on hover */
   }
   
-  
-  
   .links a {
     margin: 0 10px;
     color: #BFC8FF;
@@ -91,12 +89,32 @@ body {
   }
   
   /* Projects */
+  .project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-link:hover .project {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
   .project {
     background-color: #464E80;
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+  
+  
+  .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
   
   .project h3 {
     color: #BFC8FF;
