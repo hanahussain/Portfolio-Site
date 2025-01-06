@@ -128,6 +128,10 @@ function displayProjects(repos) {
     e.preventDefault(); // Prevent default anchor behavior
     document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
   });  
+  
+  document.getElementById("toggle-mode").addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+  });
 
   
 // Fetch and display repositories when the page loads

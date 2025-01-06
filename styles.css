@@ -58,7 +58,56 @@ body {
     background: rgba(0, 0, 0, 0.8); /* Darker on hover */
   }
 
-
+  body.dark-mode {
+    background-color: #1E1E1E;
+    color: #CFCFCF;
+  }
+  
+  button#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #BFC8FF;
+    color: #0B1033;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #toggle-mode {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+  }
+  
+  #toggle-mode img {
+    width: 200px; /* Adjust size as needed */
+    height: 80px; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Add a hover effect */
+  }
+  
+  #toggle-mode img:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+  }
+  
+  
+  #toggle-mode:hover {
+    background-color: var(--background-color);
+    color: var(--accent-color);
+  }
+  
   
   .links a {
     margin: 0 10px;
@@ -157,3 +206,57 @@ body {
     color: #fff;
   }
   
+  /* Light Mode Colors */
+body.light-mode {
+  background-color: #64878B; /* Light background */
+  color: #0C3330; /* Light text color */
+}
+
+body.light-mode .hero {
+  background: linear-gradient(135deg, #0C3330, #ACC0BE); /* Adjust gradient for light mode */
+}
+
+body.light-mode .links a {
+  color: #6E9692; /* Adjust link color */
+  border-color: #6E9692; /* Adjust border color */
+}
+
+body.light-mode .links a:hover {
+  background-color: #6E9692;
+  color: #64878B; /* Adjust hover text color */
+}
+
+body.light-mode section {
+  background-color: #3D6B67; /* Light section background */
+  color: #0C3330; /* Section text color */
+}
+
+body.light-mode h2 {
+  color: #0C3330; /* Heading color for light mode */
+}
+
+body.light-mode .project {
+  background-color: #6E9692; /* Light project background */
+}
+
+body.light-mode .project h3 {
+  color: #0C3330; /* Project title color */
+}
+
+body.light-mode input, 
+body.light-mode textarea, 
+body.light-mode button {
+  background-color: #ACC0BE; /* Light form fields background */
+  color: #0C3330; /* Light form fields text */
+  border-color: #0C3330; /* Light border color */
+}
+
+body.light-mode button {
+  background-color: #3D6B67; /* Light button background */
+  color: #64878B; /* Light button text */
+}
+
+body.light-mode button:hover {
+  background-color: #6E9692; /* Light button hover */
+  color: #64878B; /* Light button hover text */
+}
