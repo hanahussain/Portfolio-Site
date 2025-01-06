@@ -54,5 +54,31 @@ function displayProjects(repos) {
     return http.status === 200;
   }
 
+  const text = ["a Software Developer.", "a Creative Thinker.", "an Innovator."];
+  let index = 0;
+  
+  function flashText() {
+    const animatedText = document.querySelector(".animated-text");
+    
+    // Update the text content
+    animatedText.textContent = text[index];
+    animatedText.style.opacity = "1"; // Make text visible
+    
+    // Hide text after 2 seconds
+    setTimeout(() => {
+      animatedText.style.opacity = "0";
+    }, 2000);
+  
+    // Move to the next index, cycling back to 0
+    index = (index + 1) % text.length;
+  }
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    flashText(); // Start immediately
+    setInterval(flashText, 3000); // Run every 4.5 seconds (2s visible + 1s pause)
+  });
+  
+
+  
 // Fetch and display repositories when the page loads
 fetchGitHubRepos();
