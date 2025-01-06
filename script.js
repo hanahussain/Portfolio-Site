@@ -107,6 +107,9 @@ async function fetchGitHubRepos() {
     document.body.classList.toggle("light-mode");
   });
 
+  // Load EmailJS
+  emailjs.init('fasGjOXPngVzrsybf');
+
   // Send contact form message to personal email
   document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the default form submission
@@ -124,12 +127,23 @@ async function fetchGitHubRepos() {
       alert("Please fill out all fields.");
       return;
     }
+
+    event.preventDefault(); // Prevent default form submission
+
+    //use emailJS to receive emails directly from site
+    const form = this;
   
-    // Construct the mailto link
-    const mailtoLink = `mailto:hussain_hana@yahoo.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(email)}`;
-  
-    // Open the mailto link
-    window.location.href = mailtoLink;
+    emailjs.sendForm('service_8cv6kmg', 'template_xxwzujo', form)
+      .then(() => {
+        alert("Thanks! I got your email and will respond as soon as I can."); // Success feedback
+        form.reset(); // Clear the form fields
+      })
+      .catch(() => {
+        alert("Your email was not sent. This could be because my monthly quota for receiving emails has been met."); // Failure feedback
+      });
+
+      // Clear the form fields
+      this.reset();
   });
   
   // Function to validate email format
