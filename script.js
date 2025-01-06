@@ -133,6 +133,38 @@ function displayProjects(repos) {
     document.body.classList.toggle("light-mode");
   });
 
+  // Send contact form message to personal email
+  document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+  
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+  
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+  
+    if (!name || !message) {
+      alert("Please fill out all fields.");
+      return;
+    }
+  
+    // Construct the mailto link
+    const mailtoLink = `mailto:hussain_hana@yahoo.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(email)}`;
+  
+    // Open the mailto link
+    window.location.href = mailtoLink;
+  });
+  
+  // Function to validate email format
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+  
+
   
 // Fetch and display repositories when the page loads
 fetchGitHubRepos();
