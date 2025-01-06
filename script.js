@@ -91,9 +91,6 @@ function displayProjects(repos) {
         });
       }
       
-      
-      
-  
   
   // Function to check if a video file exists (returns true or false)
   function checkVideoFile(videoFilePath) {
