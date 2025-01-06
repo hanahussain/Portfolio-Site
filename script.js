@@ -1,6 +1,7 @@
 const githubUsername = "hanahussain";
 const projectContainer = document.getElementById("project-container");
 const videoFolderPath = "assets/videos/";
+const backToTopButton = document.getElementById("back-to-top");
 
 // Fetch repositories using GitHub's API
 async function fetchGitHubRepos() {
@@ -164,6 +165,20 @@ function displayProjects(repos) {
     return emailRegex.test(email);
   }
   
+ 
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+});
+
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 
   
 // Fetch and display repositories when the page loads

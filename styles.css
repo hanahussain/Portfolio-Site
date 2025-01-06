@@ -260,3 +260,21 @@ body.light-mode button:hover {
   background-color: #6E9692; /* Light button hover */
   color: #64878B; /* Light button hover text */
 }
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #7A80AA;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+#back-to-top:hover {
+  background-color: #BCBFD5;
+}
+
