@@ -178,6 +178,24 @@ body {
     text-align: center;
     color: #BCBFD5;
   }
+
+  #about-profile {
+    display: flex;
+    justify-content: space-between; /* Push text and image to opposite ends */
+    align-items: center; /* Align items properly */
+    width: 100%; /* Ensures full container width */
+  }
+  
+  #about-text {
+    display: flex;
+    flex-direction: column; /* Stack paragraphs */
+  }
+  
+  #profile {
+    width: 150px; 
+    height: 190px;
+  }
+  
   
   /* Projects */
   .project-link {
@@ -262,7 +280,7 @@ body {
     color: #fff;
   }
   
-  /* Light Mode Colors */
+/* Light Mode Colors */
 body.light-mode {
   background-color: #64878B; /* Light background */
   color: #0C3330; /* Light text color */
@@ -273,13 +291,27 @@ body.light-mode .hero {
 }
 
 body.light-mode .links a {
-  color: #6E9692; /* Adjust link color */
-  border-color: #6E9692; /* Adjust border color */
+  color: #1f433f; /* Adjust link color */
+  border-color: #1f433f; /* Adjust border color */
 }
 
 body.light-mode .links a:hover {
-  background-color: #6E9692;
-  color: #64878B; /* Adjust hover text color */
+  background-color: #46797f;
+  color: #102020; /* Adjust hover text color */
+}
+
+body.light-mode h4 {
+  color: #1f433f; /* Adjust color */
+}
+
+body.light-mode .hero-button {
+  color: #1f433f; /* Adjust link color */
+  border-color: #1f433f; /* Adjust border color */
+}
+
+body.light-mode .hero-button:hover {
+  background-color: #46797f;
+  color: #102020; /* Adjust hover text color */
 }
 
 body.light-mode section {
@@ -289,6 +321,14 @@ body.light-mode section {
 
 body.light-mode h2 {
   color: #0C3330; /* Heading color for light mode */
+}
+
+body.light-mode .timeline {
+  border-left: 2px solid #849897;
+}
+
+body.light-mode .timeline-item::before {
+  background-color: #849897;
 }
 
 body.light-mode .project {
