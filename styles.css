@@ -83,9 +83,9 @@ body {
 
   .arrow-down {
     position: absolute;
-    bottom: 50px;
+    bottom: 130px;
     right: 20px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fff;
     text-decoration: none;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
@@ -363,7 +363,7 @@ body.light-mode button:hover {
 }
 
 body.light-mode #back-to-top {
-  background-color: #3D6B67;
+  background-color: #0b2f2c;
 }
 
 #back-to-top {
