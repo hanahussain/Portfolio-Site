@@ -83,9 +83,9 @@ body {
 
   .arrow-down {
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
     right: 20px;
-    font-size: 4.5rem;
+    font-size: 3rem;
     color: #fff;
     text-decoration: none;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
@@ -360,6 +360,10 @@ body.light-mode button {
 body.light-mode button:hover {
   background-color: #6E9692; /* Light button hover */
   color: #64878B; /* Light button hover text */
+}
+
+body.light-mode #back-to-top {
+  background-color: #3D6B67;
 }
 
 #back-to-top {
