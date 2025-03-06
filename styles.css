@@ -192,8 +192,9 @@ body {
   }
   
   #profile {
-    width: 150px; 
+    width: 145px; 
     height: 190px;
+    border-radius: 8%;
   }
   
   
