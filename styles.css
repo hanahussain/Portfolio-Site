@@ -306,8 +306,8 @@ body.light-mode h4 {
 }
 
 body.light-mode .hero-button {
-  color: #1f433f; /* Adjust link color */
-  border-color: #1f433f; /* Adjust border color */
+  color: #0C3330; /* Adjust link color */
+  border-color: #0C3330; /* Adjust border color */
 }
 
 body.light-mode .hero-button:hover {
@@ -317,10 +317,14 @@ body.light-mode .hero-button:hover {
 
 body.light-mode section {
   background-color: #3D6B67; /* Light section background */
-  color: #0C3330; /* Section text color */
+  color: #0b2f2c; /* Section text color */
 }
 
 body.light-mode h2 {
+  color: #0C3330; /* Heading color for light mode */
+}
+
+body.light-mode h3 {
   color: #0C3330; /* Heading color for light mode */
 }
 
